@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp5
 {
-    public partial class MainForm : Form
+    public partial class Addmember: Form
     {
-        public MainForm()
+        public Addmember()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
