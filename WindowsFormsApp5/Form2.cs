@@ -35,12 +35,17 @@ namespace WindowsFormsApp5
                 try
                 {
                     Con.Open();
-                    string query = "insert into Table values ('" + NameTb.Text + "','" + PhoneTb.Text + "','" + comboBox2.SelectedItem.ToString() + "','" + AgeTb.Text + "','" + AmountTb.Text + "','" + comboBox1.SelectedItem.ToString()"')"';
+                    string query = "insert into Table values ('" + NameTb.Text + "','" + PhoneTb.Text + "','" + comboBox2.SelectedItem.ToString() + "','" + AgeTb.Text + "','" + AmountTb.Text + "','" + comboBox1.SelectedItem.ToString()+"')";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("MEMBER ADDED SUCESSFULLY");
+                    Con.Close();
                     
 
                 }
                 catch(Exception ex)
                 {
+                    MessageBox.Show(ex.Message);
 
                 }
             }
