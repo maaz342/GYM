@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace WindowsFormsApp5
 {
@@ -17,7 +17,20 @@ namespace WindowsFormsApp5
         {
             InitializeComponent();
         }
-        SqlConnection Con =new SqlConnection(@"Data Source=FAHAD12-PC;Initial Catalog=GYM;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=FAHAD12-PC;Initial Catalog=GYM;Integrated Security=True");
+        //GRID VIEW MEMBER DATA
+        private void popu()
+        {
+            Con.Open();
+            string Q = "Select * from MBRTable";
+            SqlDataAdapter sda = new SqlDataAdapter(Q, Con);
+            SqlCommandBuilder build = new SqlCommandBuilder();
+            var ds = new DataSet();
+            sda.Fill(ds);
+            VIEW.DataSource = ds.Tables[0];
+            Con.Close();
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -65,7 +78,7 @@ namespace WindowsFormsApp5
 
         private void Addmember_Load(object sender, EventArgs e)
         {
-
+            popu();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +108,18 @@ namespace WindowsFormsApp5
 
         private void label6_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            NameTb.Text = VIEW.SelectedRows[0].Cells[1].Value.ToString();
+            PhoneTb.Text = VIEW.SelectedRows[0].Cells[2].Value.ToString();
+            AgeTb.Text = VIEW.SelectedRows[0].Cells[4].Value.ToString();
+            GenderTb.Text = VIEW.SelectedRows[0].Cells[3].Value.ToString();
+            TimeTb.Text = VIEW.SelectedRows[0].Cells[5].Value.ToString();
+            AmountTb.Text = VIEW.SelectedRows[0].Cells[6].Value.ToString();
+
 
         }
     }
