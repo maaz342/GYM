@@ -25,6 +25,10 @@ namespace WindowsFormsApp5
 
         private void add_Click(object sender, EventArgs e)
         {
+            string name = NameTb.Text;
+            string phone = PhoneTb.Text;
+            string age = AgeTb.Text;
+
             if (NameTb.Text == "" || AmountTb.Text == "" || AgeTb.Text == ""||PhoneTb.Text=="")
             {
                 MessageBox.Show("MISSING INFO");
@@ -35,12 +39,20 @@ namespace WindowsFormsApp5
                 try
                 {
                     Con.Open();
-                    string query = "insert into Table values ('" + NameTb.Text + "','" + PhoneTb.Text + "','" + comboBox2.SelectedItem.ToString() + "','" + AgeTb.Text + "','" + AmountTb.Text + "','" + comboBox1.SelectedItem.ToString()+"')";
+
+                    string query = "insert into MBRTable values ('" + NameTb.Text + "','" + PhoneTb.Text + "','" + comboBox2.SelectedItem.ToString() + "','" + AgeTb.Text + "','" + comboBox1.SelectedItem.ToString() + "','" + AmountTb.Text+"' )";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("MEMBER ADDED SUCESSFULLY");
+
                     Con.Close();
-                    
+                    NameTb.Text = "";
+                    comboBox1.Text = "";
+                    AmountTb.Text = "";
+                    AgeTb.Text = "";
+                    comboBox2.Text = "";
+                    PhoneTb.Text = "";
+
 
                 }
                 catch(Exception ex)
@@ -49,6 +61,16 @@ namespace WindowsFormsApp5
 
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NameTb.Text = "";
+            comboBox1.Text = "";
+            AmountTb.Text = "";
+            AgeTb.Text = "";
+            comboBox2.Text = "";
+            PhoneTb.Text = "";
         }
     }
 }

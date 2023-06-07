@@ -175,10 +175,8 @@
             this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "6-8",
-            "9-11",
-            "1-4",
-            "6-10"});
+            "MALE",
+            "FEMALE"});
             this.comboBox2.Location = new System.Drawing.Point(541, 356);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 35);
@@ -230,6 +228,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "RESET";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // add
             // 
