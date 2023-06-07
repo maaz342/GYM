@@ -46,6 +46,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(354, 22);
+            this.label1.Location = new System.Drawing.Point(343, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 37);
             this.label1.TabIndex = 2;
@@ -64,11 +67,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(320, 82);
+            this.label2.Location = new System.Drawing.Point(313, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(289, 37);
+            this.label2.Size = new System.Drawing.Size(298, 37);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ADD NEW MEMBER";
+            this.label2.Text = "Update And Delete";
             // 
             // label3
             // 
@@ -207,7 +210,7 @@
             this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.add.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.add.Location = new System.Drawing.Point(22, 501);
+            this.add.Location = new System.Drawing.Point(12, 501);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(103, 39);
             this.add.TabIndex = 16;
@@ -220,7 +223,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(111, 566);
+            this.button1.Location = new System.Drawing.Point(277, 501);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 39);
             this.button1.TabIndex = 17;
@@ -233,7 +236,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(549, 551);
+            this.button2.Location = new System.Drawing.Point(143, 551);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 39);
             this.button2.TabIndex = 18;
@@ -245,7 +248,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.Location = new System.Drawing.Point(168, 501);
+            this.button3.Location = new System.Drawing.Point(143, 501);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 39);
             this.button3.TabIndex = 19;
@@ -253,12 +256,36 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(408, 131);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(543, 385);
+            this.dataGridView1.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(493, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(323, 23);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Click On Member To Be Deleted";
+            // 
             // Addmember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(979, 602);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -280,6 +307,7 @@
             this.Name = "Addmember";
             this.Text = "Addmember";
             this.Load += new System.EventHandler(this.Addmember_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +333,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label4;
     }
 }
