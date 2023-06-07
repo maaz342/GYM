@@ -72,5 +72,17 @@ namespace WindowsFormsApp5
             comboBox2.Text = "";
             PhoneTb.Text = "";
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 Log = new Form1();
+            Log.Show();
+            this.Hide();
+        }
     }
 }

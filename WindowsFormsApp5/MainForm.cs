@@ -26,5 +26,13 @@ namespace WindowsFormsApp5
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 ad=new Form2();
+            ad.Show();
+            this.Hide();
+
+        }
     }
 }
