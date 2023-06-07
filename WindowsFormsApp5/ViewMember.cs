@@ -56,6 +56,7 @@ namespace WindowsFormsApp5
 
         private void ViewMember_Load(object sender, EventArgs e)
         {
+            popu();
 
         }
     }
