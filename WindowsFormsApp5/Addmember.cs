@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp5
 {
@@ -16,7 +17,7 @@ namespace WindowsFormsApp5
         {
             InitializeComponent();
         }
-
+        SqlConnection Con =new SqlConnection(@"Data Source=FAHAD12-PC;Initial Catalog=GYM;Integrated Security=True");
         private void button1_Click(object sender, EventArgs e)
         {
 

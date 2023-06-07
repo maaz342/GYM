@@ -32,13 +32,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.NameTb = new System.Windows.Forms.TextBox();
+            this.PhoneTb = new System.Windows.Forms.TextBox();
+            this.AgeTb = new System.Windows.Forms.TextBox();
             this.NUMBER = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Amount = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.AmountTb = new System.Windows.Forms.TextBox();
             this.timing = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -84,26 +84,26 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "ADD MEMBER";
             // 
-            // textBox1
+            // NameTb
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 22);
-            this.textBox1.TabIndex = 8;
+            this.NameTb.Location = new System.Drawing.Point(4, 186);
+            this.NameTb.Name = "NameTb";
+            this.NameTb.Size = new System.Drawing.Size(269, 22);
+            this.NameTb.TabIndex = 8;
             // 
-            // textBox2
+            // PhoneTb
             // 
-            this.textBox2.Location = new System.Drawing.Point(296, 186);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(230, 22);
-            this.textBox2.TabIndex = 9;
+            this.PhoneTb.Location = new System.Drawing.Point(296, 186);
+            this.PhoneTb.Name = "PhoneTb";
+            this.PhoneTb.Size = new System.Drawing.Size(230, 22);
+            this.PhoneTb.TabIndex = 9;
             // 
-            // textBox3
+            // AgeTb
             // 
-            this.textBox3.Location = new System.Drawing.Point(541, 186);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 22);
-            this.textBox3.TabIndex = 10;
+            this.AgeTb.Location = new System.Drawing.Point(541, 186);
+            this.AgeTb.Name = "AgeTb";
+            this.AgeTb.Size = new System.Drawing.Size(233, 22);
+            this.AgeTb.TabIndex = 10;
             // 
             // NUMBER
             // 
@@ -138,12 +138,12 @@
             this.Amount.TabIndex = 13;
             this.Amount.Text = "Monthly Amount";
             // 
-            // textBox4
+            // AmountTb
             // 
-            this.textBox4.Location = new System.Drawing.Point(4, 356);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 22);
-            this.textBox4.TabIndex = 14;
+            this.AmountTb.Location = new System.Drawing.Point(4, 356);
+            this.AmountTb.Name = "AmountTb";
+            this.AmountTb.Size = new System.Drawing.Size(233, 22);
+            this.AmountTb.TabIndex = 14;
             // 
             // timing
             // 
@@ -242,6 +242,7 @@
             this.add.TabIndex = 20;
             this.add.Text = "ADD";
             this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // pictureBox1
             // 
@@ -267,13 +268,13 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.timing);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.AmountTb);
             this.Controls.Add(this.Amount);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.NUMBER);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AgeTb);
+            this.Controls.Add(this.PhoneTb);
+            this.Controls.Add(this.NameTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -291,13 +292,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox NameTb;
+        private System.Windows.Forms.TextBox PhoneTb;
+        private System.Windows.Forms.TextBox AgeTb;
         private System.Windows.Forms.Label NUMBER;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Amount;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox AmountTb;
         private System.Windows.Forms.Label timing;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
