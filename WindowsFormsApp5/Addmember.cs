@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp5
 {
-    public partial class Addmember: Form
+    public partial class Addmember : Form
     {
         public Addmember()
         {
@@ -31,19 +31,90 @@ namespace WindowsFormsApp5
             Con.Close();
 
         }
-        private void button1_Click(object sender, EventArgs e)
+        int key = 0;
+        private void VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            key = Convert.ToInt32(VIEW.SelectedRows[0].Cells[0].Value.ToString());
+            NameTb.Text = VIEW.SelectedRows[0].Cells[1].Value.ToString();
+            PhoneTb.Text = VIEW.SelectedRows[0].Cells[2].Value.ToString();
+
+            GenderTb.Text = VIEW.SelectedRows[0].Cells[3].Value.ToString();
+            AgeTb.Text = VIEW.SelectedRows[0].Cells[4].Value.ToString();
+            TimeTb.Text = VIEW.SelectedRows[0].Cells[5].Value.ToString();
+            AmountTb.Text = VIEW.SelectedRows[0].Cells[6].Value.ToString();
+
+
 
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            key = Convert.ToInt32(VIEW.SelectedRows[0].Cells[0].Value.ToString());
+
+            if (key == 0 || NameTb.Text == "" || AmountTb.Text == "" || AgeTb.Text == "" || PhoneTb.Text == "" || GenderTb.Text == "" || TimeTb.Text == "")
+            {
+                MessageBox.Show("MISSING INFORMATION");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string q = "UPDATE MBRTable SET MName='" + NameTb.Text + "', MPhone='" + PhoneTb.Text + "', MGen='" + GenderTb.Text + "', MAge=" + AgeTb.Text + ", MTiming='" + TimeTb.Text + "', MAmount=" + AmountTb.Text + " WHERE MId=" + key + ";";
+
+                    SqlCommand cmd = new SqlCommand(q, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("MEMBER UPDATED SUCCESSFULLY");
+                    Con.Close();
+                    popu();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            NameTb.Text = "";
+            AgeTb.Text = "";
+            GenderTb.Text = "";
+            AmountTb.Text = "";
+            TimeTb.Text = "";
+            PhoneTb.Text = "";
 
         }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
+            key = Convert.ToInt32(VIEW.SelectedRows[0].Cells[0].Value.ToString());
 
+            if (key==0)
+            {
+                MessageBox.Show("SELECT MEMBER TO BE DELETED");
+            }
+            else
+            {
+                try
+                {
+                    Con.Open();
+                    string qu = "delete from MBRTable where MId =" + key + ";";
+                    SqlCommand cm = new SqlCommand(qu, Con);
+                    cm.ExecuteNonQuery();
+                    MessageBox.Show("DELETED!!!");
+                    Con.Close();
+                    popu();
+
+;                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -110,18 +181,13 @@ namespace WindowsFormsApp5
         {
 
         }
+     
 
-        private void VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            NameTb.Text = VIEW.SelectedRows[0].Cells[1].Value.ToString();
-            PhoneTb.Text = VIEW.SelectedRows[0].Cells[2].Value.ToString();
-           
-            GenderTb.Text = VIEW.SelectedRows[0].Cells[3].Value.ToString();
-            AgeTb.Text = VIEW.SelectedRows[0].Cells[4].Value.ToString();
-            TimeTb.Text = VIEW.SelectedRows[0].Cells[5].Value.ToString();
-            AmountTb.Text = VIEW.SelectedRows[0].Cells[6].Value.ToString();
-
-
+            Form1 fr = new Form1();
+            fr.Show();
+            this.Hide();
         }
     }
 }
