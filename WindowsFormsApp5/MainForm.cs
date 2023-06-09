@@ -17,11 +17,6 @@ namespace WindowsFormsApp5
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -33,6 +28,42 @@ namespace WindowsFormsApp5
             ad.Show();
             this.Hide();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Addmember b = new Addmember();
+            b.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Form1 b = new Form1();
+            b.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Payment a = new Payment();
+            a.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

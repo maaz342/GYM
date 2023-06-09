@@ -80,9 +80,14 @@ namespace WindowsFormsApp5
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 Log = new Form1();
+            MainForm Log = new MainForm();
             Log.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -185,7 +185,7 @@ namespace WindowsFormsApp5
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 fr = new Form1();
+            MainForm fr = new MainForm();
             fr.Show();
             this.Hide();
         }

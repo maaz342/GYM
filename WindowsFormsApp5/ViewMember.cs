@@ -31,6 +31,18 @@ namespace WindowsFormsApp5
             Con.Close();
 
         }
+        private void FilterByName()
+        {
+            Con.Open();
+            string Q = "Select * from MBRTable where MId='" + textBox1.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(Q, Con);
+            SqlCommandBuilder build = new SqlCommandBuilder();
+            var ds = new DataSet();
+            sda.Fill(ds);
+            VIEW.DataSource = ds.Tables[0];
+            Con.Close();
+
+        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -41,7 +53,7 @@ namespace WindowsFormsApp5
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            MainForm form = new MainForm();
             form.Show();
             this.Hide();
 
@@ -61,6 +73,16 @@ namespace WindowsFormsApp5
         {
             popu();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FilterByName();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            popu();
         }
     }
 }
