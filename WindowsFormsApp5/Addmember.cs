@@ -34,14 +34,7 @@ namespace WindowsFormsApp5
         int key = 0;
         private void VIEW_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            key = Convert.ToInt32(VIEW.SelectedRows[0].Cells[0].Value.ToString());
-            NameTb.Text = VIEW.SelectedRows[0].Cells[1].Value.ToString();
-            PhoneTb.Text = VIEW.SelectedRows[0].Cells[2].Value.ToString();
-
-            GenderTb.Text = VIEW.SelectedRows[0].Cells[3].Value.ToString();
-            AgeTb.Text = VIEW.SelectedRows[0].Cells[4].Value.ToString();
-            TimeTb.Text = VIEW.SelectedRows[0].Cells[5].Value.ToString();
-            AmountTb.Text = VIEW.SelectedRows[0].Cells[6].Value.ToString();
+           
 
 
 
@@ -188,6 +181,23 @@ namespace WindowsFormsApp5
             MainForm fr = new MainForm();
             fr.Show();
             this.Hide();
+        }
+
+        private void VIEW_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            key = Convert.ToInt32(VIEW.SelectedRows[0].Cells[0].Value.ToString());
+            NameTb.Text = VIEW.SelectedRows[0].Cells[1].Value.ToString();
+            PhoneTb.Text = VIEW.SelectedRows[0].Cells[2].Value.ToString();
+
+            GenderTb.Text = VIEW.SelectedRows[0].Cells[3].Value.ToString();
+            AgeTb.Text = VIEW.SelectedRows[0].Cells[4].Value.ToString();
+            TimeTb.Text = VIEW.SelectedRows[0].Cells[5].Value.ToString();
+            AmountTb.Text = VIEW.SelectedRows[0].Cells[6].Value.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

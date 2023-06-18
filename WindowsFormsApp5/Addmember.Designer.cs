@@ -273,9 +273,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.VIEW.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.VIEW.RowTemplate.Height = 24;
+            this.VIEW.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.VIEW.Size = new System.Drawing.Size(1052, 474);
             this.VIEW.TabIndex = 20;
             this.VIEW.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VIEW_CellContentClick);
+            this.VIEW.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VIEW_CellDoubleClick);
             // 
             // label4
             // 
@@ -291,12 +293,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1012, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(1286, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Addmember
             // 

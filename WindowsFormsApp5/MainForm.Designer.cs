@@ -31,15 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -55,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button5);
@@ -67,12 +69,37 @@
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(860, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(665, 34);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button3.Size = new System.Drawing.Size(153, 46);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "BACK";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button5.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button5.ForeColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(457, 34);
+            this.button5.Location = new System.Drawing.Point(491, 34);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button5.Size = new System.Drawing.Size(153, 46);
@@ -86,7 +113,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button2.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(240, 29);
+            this.button2.Location = new System.Drawing.Point(331, 34);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button2.Size = new System.Drawing.Size(153, 46);
@@ -100,7 +127,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(12, 29);
+            this.button1.Location = new System.Drawing.Point(0, 34);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(153, 46);
@@ -121,30 +148,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // button3
+            // button6
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(650, 34);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(153, 46);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "BACK";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(860, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.button6.ForeColor = System.Drawing.Color.Red;
+            this.button6.Location = new System.Drawing.Point(159, 34);
+            this.button6.Name = "button6";
+            this.button6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button6.Size = new System.Drawing.Size(153, 46);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "VIEW MEMBER";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // MainForm
             // 
@@ -158,8 +174,8 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,5 +189,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button6;
     }
 }

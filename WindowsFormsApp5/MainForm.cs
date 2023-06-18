@@ -65,5 +65,12 @@ namespace WindowsFormsApp5
         {
             Application.Exit();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ViewMember a = new ViewMember();
+            a.Show();
+            this.Hide();
+        }
     }
 }
